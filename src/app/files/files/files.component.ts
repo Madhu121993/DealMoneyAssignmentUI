@@ -42,6 +42,7 @@ export class FilesComponent implements OnInit {
       }else{
         var excelData: any = response[0].data
         this.excelService.exportAsExcelFile(excelData, 'sample');
+        this.toastr.Success("You have successfully downloaded")
       }
      
     }).catch((err) => {
